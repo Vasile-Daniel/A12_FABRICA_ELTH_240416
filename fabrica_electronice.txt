@@ -1,0 +1,3 @@
+python -m venv envme
+envme/scripts/activate
+pip install django
