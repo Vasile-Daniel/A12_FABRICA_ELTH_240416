@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1> PLASEAZA COMANDA  </h1>
+<form action = "/plaseaza_comanda/" method = "post">
+    {% csrf token %}
+</form>
+{% endblock %}

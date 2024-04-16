@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1> MANAGEMENT MATERIALE </h1>
+<h2> Materiale Disponibile </h2>
+
+<ul>
+    {% for material in materiale %}
+        <li> {{ material.nume }} - {{ material.cantitate }} </li>
+    {% endfor %}   
+</ul>
+
+<h2> Comenzi Recente </h2>
+
+
+<ul>
+    {% for comanda in comenzi_recente%}
+        <li > {{ comanda.nume_client}} a comandat {{ comanda.cantitate}} bucăți de {{ comanda.material.nume }}</li>
+    {% endfor %}
+</ul>
+
+<a href = "{% url 'plaseaza_comanda'%}"> Plaseaza o comandă nouă</a>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% include 'main.html' %}
+
+{% block content %}
+    <section class = "">
+        <div class = "">
+            <div class = "">
+                <h3 class = "" data-title = "" > 
+                    Logare
+                </h3>
+            </div>
+            <div class = "">
+                <form class = "" action = "" method = "POST">
+                    {% csrf_token %}
+
+                    <label for = "" > Utilizator: </label>
+                    <input class = "" type = "text" name = "utilizator" placeholder = "Introdu utilizator">
+
+                    <label for = "" > Parola: </label>
+                    <input class = "" type = "password" name = "parola" placeholder = "Introdu parola" >
+
+                    <hr>
+
+                    <input class = "" type = "submit" value = "Logheaza-te" >
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

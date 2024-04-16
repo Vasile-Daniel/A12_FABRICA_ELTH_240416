@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset = "UTF-8">
+    <title> GESTIUNE MATERIALE </title>
+</head>
+<body>
+    {% if message %}
+        {% for message in messages %}
+            <div class = "" role = "alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% include 'navbar.html'%}
+
+        {% block content %}
+        {% endblock %}
+
+    {% include 'footer.html'%}
+</body>
